@@ -1,4 +1,4 @@
-package com.company;
+package com.lesson1;
 
 public class DoWhile {
     public static void main (String [] args){
