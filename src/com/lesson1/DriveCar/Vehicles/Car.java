@@ -9,7 +9,7 @@ public class Car {
     Driver driver;
     Engine engine;
 
-    public Car (String marka, String carClass, Driver driver, Engine engine){
+    public Car(String marka, String carClass, Driver driver, Engine engine) {
         super();
         this.marka = marka;
         this.carClass = carClass;
@@ -18,24 +18,35 @@ public class Car {
 
     }
 
-    public void start(){ System.out.println("Едет прямо"); }
-    public void stop(){ System.out.println("Остановился"); }
-    public void turnLeft(){ System.out.println("Повернул налево"); }
-    public void turnRight(){ System.out.println("Повернул направо"); }
+    public void start() {
+        System.out.println("Едет прямо");
+    }
+
+    public void stop() {
+        System.out.println("Остановился");
+    }
+
+    public void turnLeft() {
+        System.out.println("Повернул налево");
+    }
+
+    public void turnRight() {
+        System.out.println("Повернул направо");
+    }
+
     public void printInfo() {
-        System.out.println("Марка авто: " + marka + "\n Класс авто: " + carClass);
+        System.out.println("Марка авто: " + marka + " Класс авто: " + carClass);
         System.out.println(
-                "Компания производитель: " + engine.getCompany() + "\n Мощность двигателя: " + engine.getPower());
-        System.out.println("Водитель: " + driver.getFullName() + ", Возраст (лет): " + driver.getAge() + ", С опытом вождения (лет): "
-                + driver.getExperience());
+                "Компания производитель: " + engine.getCompany() + " Мощность двигателя: " + engine.getPower());
+        System.out.println("Водитель: " + driver.getFullName() + ", Возраст: " + driver.getAge() + "год" + ", С опытом вождения: "
+                + driver.getExperience() + "года");
     }
 
     public static void main(String[] args) {
-        Driver driver = new Driver("Олег Алексеевич", 21, 3);
-        Engine engine = new Engine(234, "Mercedes");
-        Car myCar = new Car("Mercedes S class", "Luxury Car", driver, engine);
+        Driver driver = new Driver("Олег Алексеевич; ", 21, 3);
+        Engine engine = new Engine(234, " Mercedes; ");
+        Car myCar = new Car(" Mercedes S class; ", " Luxury Car; ", driver, engine);
         myCar.printInfo();
 
     }
-
 }
