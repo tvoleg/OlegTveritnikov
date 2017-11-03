@@ -3,24 +3,20 @@ package com.lesson1.Summa2Chisel;
 import java.util.Scanner;
 
 public class Summa2Chisel {
-    public static void main(String[]args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter two integers");
-        if (scanner.hasNextInt()) {
-            int x = scanner.nextInt();
-            med2(scanner, x);
-        } else {
-            System.out.println("Вы ввели не правильное число");
-        }
+        System.out.println(med2(scanner) + med2(scanner));
     }
 
-    private static void med2(Scanner scanner, int x) {
-        int sum;
+    private static int med2(Scanner scanner) {
         if (scanner.hasNextInt()) {
             int y = scanner.nextInt();
-            sum = (x + y);
-            System.out.println("Сумма равна = " + sum);
+        } else {
+            System.out.println("Вы ввели не правильное число");
+            System.exit(0);
         }
+        return 0;
     }
 }
 

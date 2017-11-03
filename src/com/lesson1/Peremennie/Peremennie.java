@@ -55,7 +55,6 @@ public class Peremennie {
 
     }
 
-
     public static void convertToByte1() {
         short b3 = 5;
         byte b4 = 4;
@@ -157,7 +156,6 @@ public class Peremennie {
         System.out.println(a1);
     }
 
-
     public static void convertToChar3() {
         int a1 = 5;
         char a2 = '4';
@@ -190,7 +188,7 @@ public class Peremennie {
     public static void convertToInt0() {
         byte a1 = 5;
         int a2 = 4;
-        a2 = (int) a1;
+        a2 = a1;
         System.out.println(a1);
     }
 
@@ -258,7 +256,6 @@ public class Peremennie {
         System.out.println(a1);
     }
 
-
     public static void convertToLong5() {
         float a1 = 5f;
         long a2 = 4L;
@@ -315,7 +312,6 @@ public class Peremennie {
         float a2 = 4f;
         a2 = (float) a1;
         System.out.println(a1);
-
     }
 
     public static void convertToDouble0() {

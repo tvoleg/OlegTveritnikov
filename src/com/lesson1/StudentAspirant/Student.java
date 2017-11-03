@@ -3,9 +3,10 @@ package com.lesson1.StudentAspirant;
 
 public class Student {
     private String lastName;
-    int scholar = 100;
+   private int scholar = 100;
 
     public Student(String lastName) {
+        this.lastName=lastName;
     }
 
     public Student() {
@@ -27,3 +28,4 @@ public class Student {
         }
     }
 }
+

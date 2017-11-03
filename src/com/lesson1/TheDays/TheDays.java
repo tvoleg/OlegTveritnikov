@@ -18,9 +18,7 @@ public class TheDays {
                 System.out.println("Четверг");
             } else if (day == 5) {
                 System.out.println("Пятница");
-            } else if (day == 6) {
-                System.out.println("Выходной");
-            } else if (day == 7) {
+            } else if (day == 6||day==7) {
                 System.out.println("Выходной");
             }
         } else {
