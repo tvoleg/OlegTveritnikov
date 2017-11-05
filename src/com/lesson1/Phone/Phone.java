@@ -1,40 +1,82 @@
 package com.lesson1.Phone;
 
 public class Phone {
+    int number;
+    String model;
+    int weight;
 
-    public static void main(String[] args) {
-        PhoneMy phoneApple = new PhoneMy(223, "2", 4);
-        PhoneMy phoneNokia = new PhoneMy();
-        PhoneMy phoneSamsung = new PhoneMy();
-
-        phoneNokia.number = 2;
-        phoneNokia.model = "Nokia 3310";
-        phoneNokia.weight = 150;
-
-        phoneSamsung.number = 3;
-        phoneSamsung.model = "Samsung J7";
-        phoneSamsung.weight = 300;
-
-        System.out.println("Number =" + phoneApple.number);
-        System.out.println("Model =" + phoneNokia.number);
-        System.out.println("Weight =" + phoneSamsung.number);
-
-        phoneApple.receiveCall("Alex ");
-        System.out.println(phoneApple.getPhoneNumber());
-        phoneApple.receiveCall("Alex ", " 223342");
-
-        phoneApple.sendMassage ();
-        phoneApple.sendMassage (phoneApple.number, 34643);
-        phoneApple.sendMassage(1111, 22, 3, 444);
-
-        phoneApple.setNumber(1111);
-        phoneApple.setModel("s7");
-        phoneApple.setWeight(3);
-
-        System.out.println("Number =" + phoneApple.getNumber());
-        System.out.println("Number =" + phoneApple.getModel());
-        System.out.println("Number =" + phoneApple.getWeight());
-
+    void receiveCall(String name) {
+        System.out.println(name + "calling");
     }
 
+    void receiveCall(String name, String number) {
+        System.out.println(name + number);
+    }
+
+    int getPhoneNumber() {
+        return number;
+    }
+
+    Phone() {
+        System.out.println("basic");
+    }
+
+    Phone(int n, String m, int w) {
+        this();
+        number = n;
+        model = "m";
+        weight = w;
+    }
+
+    void sendMassage(int... array) {
+        System.out.println("Номер получателя:" + array.length);
+        for (int number : array) {
+            System.out.println(number);
+        }
+        System.out.println();
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+
+    private static int count = 0;
+    private String end = "none";
+
+    public Phone(String end) {
+        this.end = end;
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+    public void setCount (int count) {this.count = count;}
+
+    protected void finalize() {
+        System.out.println("Sum");
+        count--;
+    }
 }
+

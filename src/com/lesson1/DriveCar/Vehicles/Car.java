@@ -5,9 +5,9 @@ import com.lesson1.DriveCar.Professions.Driver;
 
 
 public class Car {
-    String carClass, marka;
-    Driver driver;
-    Engine engine;
+    private String carClass, marka;
+    private Driver driver;
+    private Engine engine;
 
     public Car(String marka, String carClass, Driver driver, Engine engine) {
         super();
@@ -15,29 +15,25 @@ public class Car {
         this.carClass = carClass;
         this.driver = driver;
         this.engine = engine;
-
     }
-
-    public void start() {
+    private void start() {
         System.out.println("Едет прямо");
     }
-
-    public void stop() {
+    private void stop() {
         System.out.println("Остановился");
     }
-
-    public void turnLeft() {
+    private void turnLeft() {
         System.out.println("Повернул налево");
     }
-
-    public void turnRight() {
+    private void turnRight() {
         System.out.println("Повернул направо");
     }
 
+
+
     public void printInfo() {
         System.out.println("Марка авто: " + marka + " Класс авто: " + carClass);
-        System.out.println(
-                "Компания производитель: " + engine.getCompany() + " Мощность двигателя: " + engine.getPower());
+        System.out.println("Компания производитель: " + engine.getCompany() + " Мощность двигателя: " + engine.getPower());
         System.out.println("Водитель: " + driver.getFullName() + ", Возраст: " + driver.getAge() + "год" + ", С опытом вождения: "
                 + driver.getExperience() + "года");
     }

@@ -4,7 +4,7 @@ import com.lesson1.DriveCar.Professions.Driver;
 import com.lesson1.DriveCar.Details.Engine;
 
 public class SportCar extends Car {
-    double speed;
+    public double speed;
 
     public SportCar(String marka, String carClass, Driver driver, Engine engine, double speed) {
         super(marka, carClass, driver, engine);
