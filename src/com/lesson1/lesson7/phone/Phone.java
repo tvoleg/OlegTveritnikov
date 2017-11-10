@@ -5,6 +5,19 @@ public class Phone {
     String model;
     int weight;
 
+    private static int count = 0;
+    private String end = "none";
+
+    public Phone(String end) {
+        this.end = end;
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+    public void setCount (int count) {this.count = count;}
+
     void receiveCall(String name) {
         System.out.println(name + "calling");
     }
@@ -60,19 +73,6 @@ public class Phone {
         this.weight = weight;
     }
 
-
-    private static int count = 0;
-    private String end = "none";
-
-    public Phone(String end) {
-        this.end = end;
-        count++;
-    }
-
-    public static int getCount() {
-        return count;
-    }
-    public void setCount (int count) {this.count = count;}
 
     protected void finalize() {
         System.out.println("Sum");

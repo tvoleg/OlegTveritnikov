@@ -13,9 +13,9 @@ public class Driver extends DriverPerson {
         return experience;
     }
 
-    public void setExperience(int experience) {
+   /* public void setExperience(int experience) {
         this.experience = experience;
-    }
+    }*/
 
     public static void main(String[] args) {
     }

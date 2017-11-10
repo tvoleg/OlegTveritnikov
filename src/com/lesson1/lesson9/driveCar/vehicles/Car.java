@@ -10,12 +10,12 @@ public class Car {
     private Engine engine;
 
     public Car(String marka, String carClass, Driver driver, Engine engine) {
-        super();
         this.marka = marka;
         this.carClass = carClass;
         this.driver = driver;
         this.engine = engine;
     }
+
     private void start() {
         System.out.println("Едет прямо");
     }
@@ -36,6 +36,7 @@ public class Car {
         System.out.println("Компания производитель: " + engine.getCompany() + " Мощность двигателя: " + engine.getPower());
         System.out.println("Водитель: " + driver.getFullName() + ", Возраст: " + driver.getAge() + "год" + ", С опытом вождения: "
                 + driver.getExperience() + "года");
+
     }
 
     public static void main(String[] args) {

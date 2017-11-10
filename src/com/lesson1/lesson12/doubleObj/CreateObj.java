@@ -25,6 +25,5 @@ public class CreateObj {
         System.out.println(aDouble1.doubleValue());
 
         System.out.println(d);
-
     }
 }

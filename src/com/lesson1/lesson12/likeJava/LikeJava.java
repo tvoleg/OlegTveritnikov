@@ -14,6 +14,5 @@ public class LikeJava {
         System.out.println(a().toLowerCase());
         System.out.println(a().toUpperCase());
         System.out.println(a().substring(7,11));
-
     }
 }

@@ -1,4 +1,4 @@
-/*package com.lesson1.SeasonEnum;
+package com.lesson1.lesson12.seasonEnum;
 
 public class SeasonsDemo {
    public static void main(String[] args) {
@@ -8,10 +8,8 @@ public class SeasonsDemo {
         }
     }
 }
-public class SeasonsCod{
-    public static void main(String[] args) {
+//public class SeasonsCod{
+  //  public static void main(String[] args) {
      //   for (Season)
-    }
-}
 
-*/
+

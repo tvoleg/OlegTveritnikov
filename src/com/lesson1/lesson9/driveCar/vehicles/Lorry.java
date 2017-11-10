@@ -5,9 +5,9 @@ import com.lesson1.lesson9.driveCar.professions.Driver;
 import com.lesson1.lesson9.driveCar.vehicles.Car;
 
 public class Lorry extends Car {
-    int carrying;
+    private int carrying;
 
-    public Lorry(String marka, String carClass, Driver driver, Engine engine, int carrying) {
+    public Lorry(String marka, String carClass, Driver driver, Engine engine) {
         super(marka, carClass, driver, engine);
         this.carrying = carrying;
     }
