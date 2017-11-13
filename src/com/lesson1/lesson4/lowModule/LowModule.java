@@ -16,7 +16,9 @@ public class LowModule {
         b = b < 0 ? -b : b;
         c = c < 0 ? -c : c;
 
-     //   if(a<)
+       if(a<b && a<c){
+           System.out.println();
+       }
 
 
     }

@@ -1,6 +1,8 @@
 package com.lesson1.lesson16;
 
-public class CreateDiamonds<T, V, K> {
+import java.io.Serializable;
+
+public class CreateDiamonds<T extends String, V extends Animal & Serializable, K extends Number> {
     T ob1;
     V ob2;
     K ob3;
@@ -27,10 +29,11 @@ public class CreateDiamonds<T, V, K> {
         System.out.println("T = " + ob1.getClass().getName() + "\nV = " + ob2.getClass().getName() + "\nK = " + ob3.getClass().getName());
     }
 
-    public static void main(String[] args) {
-        CreateDiamonds<Integer, Integer, Integer> createDiamonds = new CreateDiamonds<>(11, 22, 33);
-        CreateDiamonds<String, Double, Float> createDiamonds1 = new CreateDiamonds<>("A", 2.2, 2.33f);
+  public static void main(String[] args) {
+        CreateDiamonds<String, Animal, Integer> createDiamonds = new CreateDiamonds<>("B", new Animal(), 33);
+        CreateDiamonds<String, Animal, Float> createDiamonds1 = new CreateDiamonds<>("A", new Animal(), 2.33f);
         createDiamonds.print();
         createDiamonds1.print();
     }
+
 }

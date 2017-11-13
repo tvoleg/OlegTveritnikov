@@ -9,7 +9,7 @@ public class Food {
         Food f = new Food();
         f.prepare(new Cookable (){
             public void cook(){
-                System.out.println("Prepare dinner...");
+                System.out.println("Prepare dinner..."+f);
             }
         });
     }
