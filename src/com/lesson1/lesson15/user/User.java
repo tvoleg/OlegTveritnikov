@@ -23,4 +23,6 @@ public class User {
         query.printToLog("Alex", 112233);
         query1.printToLog("John",44544);
     }
+
 }
+

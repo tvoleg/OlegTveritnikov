@@ -1,4 +1,4 @@
-package com.lesson1.lesson15;
+package com.lesson1.lesson15.user;
 
 public class UserLocal {
     private String login;
