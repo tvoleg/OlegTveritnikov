@@ -3,7 +3,7 @@ package com.lesson1.lesson13;
 public class Report {
     public static void generateReport (Employee[] e){
         for (Employee employee : e){
-            System.out.printf("Работник: %-10s с зарплатой - %.2f\n", employee.getFullName(), employee.getSalary());
+            System.out.printf("Работник: %-20s с зарплатой - %.2f\n", employee.getFullName(), employee.getSalary());
         }
     }
 

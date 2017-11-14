@@ -190,7 +190,7 @@ public class Peremennie {
     public static void convertToInt0() {
         byte a1 = 5;
         int a2 = 4;
-        a2 = (int) a1;
+        a2 = a1;
         System.out.println(a1);
     }
 
@@ -240,7 +240,7 @@ public class Peremennie {
     public static void convertToLong1() {
         short a1 = 5;
         long a2 = 4L;
-        a2 = (long) a1;
+        a2 = a1;
         System.out.println(a1);
     }
 
@@ -356,7 +356,7 @@ public class Peremennie {
     public static void convertToDouble5() {
         float a1 = 5f;
         double a2 = 4.4;
-        a2 = (double) a1;
+        a2 = a1;
         System.out.println(a1);
     }
 }

@@ -10,7 +10,6 @@ public class ChetnoeChislo {
         if (scanner.hasNextInt()) {
             med2(scanner);
         }
-
     }
 
     private static void med2(Scanner scanner) {

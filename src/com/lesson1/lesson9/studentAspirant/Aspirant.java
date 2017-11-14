@@ -8,7 +8,6 @@ public class Aspirant extends Student {
     public Aspirant(String w, String name) {
         super(name);
         this.work = w;
-
     }
 
     public static void main(String[] args) {

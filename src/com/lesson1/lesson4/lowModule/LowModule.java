@@ -16,11 +16,13 @@ public class LowModule {
         b = b < 0 ? -b : b;
         c = c < 0 ? -c : c;
 
-       if(a<b && a<c){
-           System.out.println();
-       }
-
-
+        if (a < b && a < c) {
+            System.out.println("Наименьшее по модулю число = " + a);
+        } else if (b < a && b < c) {
+            System.out.println("Наименьшее по модулю число = " + b);
+        } else {
+            System.out.println("Наименьшее по модулю число = " + c);
+        }
     }
 
     public static double getDbl(Scanner entry) {

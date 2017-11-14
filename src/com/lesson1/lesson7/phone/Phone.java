@@ -13,23 +13,6 @@ public class Phone {
         count++;
     }
 
-    public static int getCount() {
-        return count;
-    }
-    public void setCount (int count) {this.count = count;}
-
-    void receiveCall(String name) {
-        System.out.println(name + "calling");
-    }
-
-    void receiveCall(String name, String number) {
-        System.out.println(name + number);
-    }
-
-    int getPhoneNumber() {
-        return number;
-    }
-
     Phone() {
         System.out.println("basic");
     }
@@ -41,6 +24,13 @@ public class Phone {
         weight = w;
     }
 
+    void receiveCall(String name) {
+        System.out.println(name + "calling");
+    }
+    void receiveCall(String name, String number) {
+        System.out.println(name + number);
+    }
+
     void sendMassage(int... array) {
         System.out.println("Номер получателя:" + array.length);
         for (int number : array) {
@@ -49,26 +39,28 @@ public class Phone {
         System.out.println();
     }
 
+    int getPhoneNumber() {
+        return number;
+    }
+    public static int getCount() {
+        return count;
+    }
+    public void setCount (int count) {this.count = count;}
     public String getModel() {
         return model;
     }
-
     public void setModel(String model) {
         this.model = model;
     }
-
     public int getNumber() {
         return number;
     }
-
     public void setNumber(int number) {
         this.number = number;
     }
-
     public int getWeight() {
         return weight;
     }
-
     public void setWeight(int weight) {
         this.weight = weight;
     }

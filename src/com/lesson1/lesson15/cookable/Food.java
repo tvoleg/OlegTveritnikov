@@ -13,4 +13,10 @@ public class Food {
             }
         });
     }
+
+    @Override
+    public String toString() {
+        return "Food.";
+    }
 }
+// Что нужно еще сделать?

@@ -1,8 +1,5 @@
 package com.lesson1.lesson12.seasonEnum;
 
-
-import com.lesson1.lesson12.seasonEnum.Season;
-
 public class SeasonSwitch {
     public static void main(String[] args) {
         Season season = Season.SUMMER;
@@ -25,5 +22,4 @@ public class SeasonSwitch {
                 break;
         }
     }
-
 }
