@@ -1,4 +1,4 @@
-package com.lesson1.lesson17;
+package com.lesson1.lesson17.heavyBox;
 
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -49,8 +49,8 @@ public class HeavyBox2 implements Comparable<HeavyBox2> {
     @Override
     public String toString() {
         return "HeavyBox2: " +
-                "weight=" + weight +
-                ", height=" + height +
-                ", depth=" + depth;
+                "weight= " + weight +
+                ", height= " + height +
+                ", depth= " + depth;
     }
 }
