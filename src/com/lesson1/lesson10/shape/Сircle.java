@@ -1,7 +1,5 @@
 package com.lesson1.lesson10.shape;
 
-import javafx.scene.shape.Circle;
-
 public class Сircle extends Shape {
     private int radius;
 
@@ -47,10 +45,10 @@ public class Сircle extends Shape {
                 "} " + super.toString();
     }
 
- /*   public static void main(String[] args) {
-        Circle circle = new Circle(20, "Белый");
-        Circle circle1 = new Circle(10, "Красный");
+  public static void main(String[] args) {
+      Сircle circle = new Сircle("Белый", 23);
+      Сircle circle1 = new Сircle("Красный", 13);
         circle.draw();
         circle1.draw();
-    }*/
+    }
 }

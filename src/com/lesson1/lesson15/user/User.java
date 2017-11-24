@@ -1,27 +1,39 @@
 package com.lesson1.lesson15.user;
 
+
 public class User {
     private String login;
     private int password;
 
+    public User(String login, int password) {
+        this.login = login;
+        this.password = password;
+    }
+
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public int getPassword() {
+        return password;
+    }
+
+    public void setPassword(int password) {
+        this.password = password;
+    }
+
     public class Query {
         public void printToLog(String login, int password) {
-            System.out.println("User: " + login+ " with password " + password+ " has a request.");
+            System.out.println("User: " + login + " with password " + password + " has a request.");
         }
     }
 
-    public User (String login, int password) {
-        this.login=login;
-        this.password=password;
-    }
-
-    public String getLogin (){ return login;}
-    public void setLogin(String login){this.login = login;}
-    public int getPassword(){return password;}
-    public void setPassword(int password){this.password = password;}
-
-
-    public void createQuery() {
+    public void createQuery(String login, int password) {
         Query query = new Query();
         query.printToLog("Fred", 666);
     }
@@ -52,7 +64,7 @@ public class User {
     }
 
     public static void main(String[] args) {
-        User user = new User ("Alex", 777);
+        User user = new User("Alex", 777);
         User.Query query = user.new Query();
         User.Query query1 = new User("John", 999).new Query();
 

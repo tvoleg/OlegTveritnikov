@@ -1,5 +1,6 @@
 package com.lesson1.lesson17.heavyBox;
 
+
 public class Toy {
     private String name;
     private int сost;
@@ -35,4 +36,32 @@ public class Toy {
     public void setСost(int сost) {
         this.сost = сost;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Toy toy = (Toy) o;
+
+        if (сost != toy.сost) return false;
+        return name != null ? name.equals(toy.name) : toy.name == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + сost;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Toy{" +
+                "name='" + name + '\'' +
+                ", сost=" + сost +
+                '}';
+    }
 }
+

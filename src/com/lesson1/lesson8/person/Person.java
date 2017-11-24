@@ -57,8 +57,8 @@ public class Person {
     @Override
     public String toString() {
         return "Person: " +
-                "fullName='" + fullName + '\'' +
-                ", age=" + age;
+                "fullName: " + fullName + '\'' +
+                ", age: " + age;
     }
 
     public static void main(String[] args) {

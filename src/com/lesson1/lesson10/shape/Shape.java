@@ -1,7 +1,5 @@
 package com.lesson1.lesson10.shape;
 
-import javafx.scene.shape.Circle;
-
 abstract public class Shape {
     String color;
 
@@ -40,11 +38,13 @@ abstract public class Shape {
         return "Shape: " +
                 "color='" + color + '\'';
     }
-/* public static void main(String[] args) {
+
+    public static void main(String[] args) {
         Shape[] shapes = new Shape[2];
-        shapes[0] = new Circle("Белый", 25);
+        shapes[0] = new Сircle ("Белый", 25);
         shapes[1] = new Rectangle("Синий", 67, 44);
         for (Shape shape : shapes) {
             shape.draw();
-        }*/
+        }
+    }
 }
