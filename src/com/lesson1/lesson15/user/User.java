@@ -6,22 +6,59 @@ public class User {
 
     public class Query {
         public void printToLog(String login, int password) {
-            System.out.println("User: " + login + " with password " + password + " has a request.");
+            System.out.println("User: " + login+ " with password " + password+ " has a request.");
         }
     }
+
+    public User (String login, int password) {
+        this.login=login;
+        this.password=password;
+    }
+
+    public String getLogin (){ return login;}
+    public void setLogin(String login){this.login = login;}
+    public int getPassword(){return password;}
+    public void setPassword(int password){this.password = password;}
+
 
     public void createQuery() {
         Query query = new Query();
         query.printToLog("Fred", 666);
     }
 
-    public static void main(String[] args) {
-        User user = new User();
-        User.Query query = user.new Query();
-        User.Query query1 = new User().new Query();
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-        query.printToLog("Alex", 112233);
-        query1.printToLog("John", 44544);
+        User user = (User) o;
+
+        if (password != user.password) return false;
+        return login != null ? login.equals(user.login) : user.login == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = login != null ? login.hashCode() : 0;
+        result = 31 * result + password;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "User:" +
+                "login='" + login + '\'' +
+                ", password=" + password;
+    }
+
+    public static void main(String[] args) {
+        User user = new User ("Alex", 777);
+        User.Query query = user.new Query();
+        User.Query query1 = new User("John", 999).new Query();
+
+        query.printToLog("User1", 112233);
+        query1.printToLog("User2", 44544);
+
     }
 }
 

@@ -3,7 +3,7 @@ package com.lesson1.lesson5.theDays;
 import java.util.Scanner;
 
 public class TheDays {
-    public static void main(String[]args) {
+    public static void main(String[] args) {
         System.out.println("Введите номер дня");
         Scanner scn = new Scanner(System.in);
         if (scn.hasNextInt()) {
@@ -18,7 +18,7 @@ public class TheDays {
                 System.out.println("Четверг");
             } else if (day == 5) {
                 System.out.println("Пятница");
-            } else if (day == 6||day==7) {
+            } else if (day == 6 || day == 7) {
                 System.out.println("Выходной");
             }
         } else {

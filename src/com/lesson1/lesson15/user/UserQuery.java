@@ -1,13 +1,15 @@
 package com.lesson1.lesson15.user;
 
 public class UserQuery {
-    private String login;
-    private int password;
-
     static class Query1 {
         public void printToLog(String login, int password) {
             System.out.println("User: " + login + " with password " + password + " has a request.");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "UserQuery{}";
     }
 
     public static void main(String[] args) {

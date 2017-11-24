@@ -39,10 +39,10 @@ public class Car {
                 + driver.getExperience() + "года, со скоростью " + speed.getSpeed());
     }
 
-   /* public static void main(String[] args) {
+  /*  public static void main(String[] args) {
         Driver driver = new Driver("Олег Алексеевич; ", 21, 3);
         Engine engine = new Engine(234, " Mercedes; ");
-        Car myCar = new Car(" Mercedes S class; ", " Luxury Car; ", driver, engine, 33.33);
+        Car myCar = new Car(" Mercedes S class; ", " Luxury Car; ", driver, engine);
         myCar.printInfo();
         myCar.start();
         myCar.stop();

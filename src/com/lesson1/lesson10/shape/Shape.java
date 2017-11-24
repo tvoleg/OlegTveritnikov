@@ -1,18 +1,24 @@
 package com.lesson1.lesson10.shape;
 
+import javafx.scene.shape.Circle;
+
 abstract public class Shape {
     String color;
-    double x1, x2, x3, y1, y2;
 
-    public Shape(double x1,double x2,double x3,double y1,double y2,String color) {
-        this.x1=x1;
-        this.x2=x2;
-        this.x3=x3;
-        this.y1=y1;
-        this.y2=y2;
+    public Shape(String color) {
         this.color = color;
-
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+
+    abstract public void draw();
 
     @Override
     public boolean equals(Object o) {
@@ -21,43 +27,24 @@ abstract public class Shape {
 
         Shape shape = (Shape) o;
 
-        if (Double.compare(shape.x1, x1) != 0) return false;
-        if (Double.compare(shape.x2, x2) != 0) return false;
-        if (Double.compare(shape.x3, x3) != 0) return false;
-        if (Double.compare(shape.y1, y1) != 0) return false;
-        if (Double.compare(shape.y2, y2) != 0) return false;
         return color != null ? color.equals(shape.color) : shape.color == null;
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        result = color != null ? color.hashCode() : 0;
-        temp = Double.doubleToLongBits(x1);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(x2);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(x3);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(y1);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(y2);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        return result;
+        return color != null ? color.hashCode() : 0;
     }
 
     @Override
     public String toString() {
-        return "Shape{" +
-                "color='" + color + '\'' +
-                ", x1=" + x1 +
-                ", x2=" + x2 +
-                ", x3=" + x3 +
-                ", y1=" + y1 +
-                ", y2=" + y2 +
-                '}';
+        return "Shape: " +
+                "color='" + color + '\'';
     }
-
-    abstract public double draw();
+/* public static void main(String[] args) {
+        Shape[] shapes = new Shape[2];
+        shapes[0] = new Circle("Белый", 25);
+        shapes[1] = new Rectangle("Синий", 67, 44);
+        for (Shape shape : shapes) {
+            shape.draw();
+        }*/
 }

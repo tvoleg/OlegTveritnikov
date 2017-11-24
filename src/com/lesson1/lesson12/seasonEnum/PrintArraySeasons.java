@@ -1,6 +1,6 @@
 package com.lesson1.lesson12.seasonEnum;
 
-public class printArraySeasons {
+public class PrintArraySeasons {
     public static void main(String[] args) {
         Season season;
         System.out.println("Seasons: ");
