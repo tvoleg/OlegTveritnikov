@@ -1,4 +1,6 @@
-package com.lesson1.lesson17.heavyBox;
+package com.lesson1.lesson17;
+
+import com.lesson1.lesson17.heavyBox.Toy;
 
 import java.util.Collection;
 import java.util.HashMap;

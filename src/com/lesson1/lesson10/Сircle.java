@@ -1,4 +1,4 @@
-package com.lesson1.lesson10.shape;
+package com.lesson1.lesson10;
 
 public class Сircle extends Shape {
     private int radius;

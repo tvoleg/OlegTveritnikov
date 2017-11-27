@@ -1,4 +1,4 @@
-package com.lesson1.lesson7.phone;
+package com.lesson1.lesson7;
 
 public class PhoneDemo {
 

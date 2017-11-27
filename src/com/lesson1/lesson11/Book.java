@@ -1,4 +1,4 @@
-package com.lesson1.lesson11.bookMagazine;
+package com.lesson1.lesson11;
 
 public class Book implements Printable {
     public void print() {

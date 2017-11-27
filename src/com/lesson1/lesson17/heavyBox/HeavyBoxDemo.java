@@ -1,5 +1,7 @@
 package com.lesson1.lesson17.heavyBox;
 
+import com.lesson1.lesson17.heavyBox.HeavyBox;
+
 import java.util.*;
 
 public class HeavyBoxDemo {

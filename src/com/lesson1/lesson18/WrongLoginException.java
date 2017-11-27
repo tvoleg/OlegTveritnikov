@@ -5,6 +5,5 @@ public class WrongLoginException extends Exception{
         super(massage);
     }
 
-    public WrongLoginException() {
-    }
+    public WrongLoginException() {}
 }

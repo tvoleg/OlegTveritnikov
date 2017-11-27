@@ -1,4 +1,4 @@
-package com.lesson1.lesson10.shape;
+package com.lesson1.lesson10;
 
 abstract public class Shape {
     String color;

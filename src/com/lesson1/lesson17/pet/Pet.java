@@ -1,4 +1,4 @@
-package com.lesson1.lesson17.heavyBox.pet;
+package com.lesson1.lesson17.pet;
 
 public class Pet {
     private String name;

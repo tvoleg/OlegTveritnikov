@@ -6,6 +6,5 @@ public class WrongPasswordException extends Exception{
         super(massage);
     }
 
-    public WrongPasswordException() {
-    }
+    public WrongPasswordException() {}
 }
