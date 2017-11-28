@@ -41,7 +41,7 @@ abstract public class Shape {
 
     public static void main(String[] args) {
         Shape[] shapes = new Shape[2];
-        shapes[0] = new Сircle ("Белый", 25);
+        shapes[0] = new Сircle("Белый", 25);
         shapes[1] = new Rectangle("Синий", 67, 44);
         for (Shape shape : shapes) {
             shape.draw();

@@ -25,4 +25,6 @@ public class Matrix {
         System.out.println("Colon = " + linesDown);
         System.out.println(Arrays.deepToString(this.array));
     }
+
+
 }
