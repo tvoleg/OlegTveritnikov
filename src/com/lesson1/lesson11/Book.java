@@ -5,15 +5,16 @@ public class Book implements Printable {
         System.out.println("typing book");
     }
 
-    @Override
+
     public void printBook() {
 
     }
 
-  /*  public static void main(String[] args) {
-        Book book = new Book ();
+    public static void main(String[] args) {
+        Book book = new Book();
         book.printBook();
-    }*/
+    }
+
     public static void printBook(Printable[] mag) {
         System.out.println("printBook");
         for (Printable p : mag) {

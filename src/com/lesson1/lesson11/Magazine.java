@@ -7,7 +7,6 @@ public class Magazine implements Printable {
         mag[1] = new Magazine();
         for (Printable p : mag) {
             p.print();
-            p.printBook();
         }
         printMagazine(mag);
     }
@@ -15,12 +14,6 @@ public class Magazine implements Printable {
     @Override
     public void print() {
         System.out.println("typing magazine");
-    }
-
-    @Override
-    public void printBook() {
-        System.out.println();
-
     }
 
     public static void printMagazine(Printable[] mag) {

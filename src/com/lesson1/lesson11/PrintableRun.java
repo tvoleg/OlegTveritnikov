@@ -7,14 +7,7 @@ public class PrintableRun {
             public void print() {
                 System.out.println("Time");
             }
-
-            @Override
-            public void printBook() {
-                System.out.println("King");
-
-            }
         };
         p.print();
-        p.printBook();
     }
 }
