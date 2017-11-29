@@ -8,6 +8,7 @@ public class Summa2Chisel {
         System.out.println("Введите два целых числа: ");
         if (scanner.hasNextInt()) {
             int y = scanner.nextInt();
+            scanner.hasNextInt();
             int x = scanner.nextInt();
             System.out.println("Сумма равна: " + (x + y));
         } else {
