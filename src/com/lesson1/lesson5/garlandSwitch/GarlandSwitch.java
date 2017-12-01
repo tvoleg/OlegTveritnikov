@@ -48,7 +48,7 @@ public class GarlandSwitch {
             if (a < 1 || a > 4) {
                 System.out.println("Выбираемого режима не существует.");
             } else {
-                switch (garland) {
+                switch (a) {
                     case 1:
                         System.out.println("Выбран режим бегущей строки: ");
                         printState(garland);
@@ -64,6 +64,9 @@ public class GarlandSwitch {
                     case 4:
                         System.out.println("Выбран режим бегущей строки: ");
                         runLine();
+                        break;
+                    default:
+                        System.out.println("default");
                 }
             }
         }

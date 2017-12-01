@@ -7,14 +7,13 @@ public class Car {
     private String carClass, marka;
     private Driver driver;
     private Engine engine;
-    private static SportCar speed;
+    private SportCar speed;
 
-    public Car(String marka, String carClass, Driver driver, Engine engine, SportCar speed) {
+    public Car(String marka, String carClass, Driver driver, Engine engine) {
         this.marka = marka;
         this.carClass = carClass;
         this.driver = driver;
         this.engine = engine;
-        this.speed = speed;
     }
 
     private void start() {
@@ -39,7 +38,7 @@ public class Car {
                 + driver.getExperience() + "года, со скоростью " + speed.getSpeed());
     }
 
-  /*  public static void main(String[] args) {
+   public static void main(String[] args) {
         Driver driver = new Driver("Олег Алексеевич; ", 21, 3);
         Engine engine = new Engine(234, " Mercedes; ");
         Car myCar = new Car(" Mercedes S class; ", " Luxury Car; ", driver, engine);
@@ -48,5 +47,5 @@ public class Car {
         myCar.stop();
         myCar.turnLeft();
         myCar.turnRight();
-    }*/
+    }
 }

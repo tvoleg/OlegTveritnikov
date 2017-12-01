@@ -9,6 +9,7 @@ public class Magazine implements Printable {
             p.print();
         }
         printMagazine(mag);
+        Book.printBook(mag);
     }
 
     @Override
