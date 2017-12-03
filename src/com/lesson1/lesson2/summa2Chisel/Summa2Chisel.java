@@ -11,7 +11,6 @@ public class Summa2Chisel {
         System.out.println(a + b);
     }
 
-
     private static int run(Scanner scanner) {
         if (scanner.hasNextInt()) {
             int x = scanner.nextInt();

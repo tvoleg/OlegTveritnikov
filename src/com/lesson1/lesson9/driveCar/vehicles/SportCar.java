@@ -4,18 +4,13 @@ package com.lesson1.lesson9.driveCar.vehicles;
 import com.lesson1.lesson9.driveCar.details.Engine;
 import com.lesson1.lesson9.driveCar.professions.Driver;
 
-public class SportCar  extends Car{
+public class SportCar extends Car {
     private double speed;
 
     public SportCar(double speed, String marka, String carClass, Driver driver, Engine engine) {
-        super(marka,  carClass,  driver,  engine);
+        super(marka, carClass, driver, engine);
         this.speed = speed;
     }
-
-    public double getSpeed() {
-        return speed;
-    }
-    public void setSpeed (double speed) {this.speed = speed;}
 
     @Override
     public String toString() {

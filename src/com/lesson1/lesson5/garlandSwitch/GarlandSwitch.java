@@ -41,7 +41,7 @@ public class GarlandSwitch {
         System.out.println("  1 - Байтовое представление гиралянды;");
         System.out.println("  2 - Проверка, включена ли первая лампочка;");
         System.out.println("  3 - Мигание лампочки заданное количество раз;");
-        System.out.println("  4 - Режим бегущей строки.;");
+        System.out.println("  4 - Режим бегущей строки.");
         System.out.print("Введите число: ");
         if (scn.hasNextInt()) {
             a = scn.nextInt();

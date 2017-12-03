@@ -10,10 +10,21 @@ public class Engine {
         this.power = power;
     }
 
-    public int getPower() { return power; }
-    public void setPower(int power) { this.power = power; }
-    public String getCompany() { return company; }
-    public void setCompany(String company) {this.company = company;}
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
 
 
     @Override
