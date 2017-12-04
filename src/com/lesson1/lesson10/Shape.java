@@ -15,7 +15,6 @@ abstract public class Shape {
         this.color = color;
     }
 
-
     abstract public void draw();
 
     @Override

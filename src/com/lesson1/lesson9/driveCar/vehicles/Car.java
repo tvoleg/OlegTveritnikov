@@ -7,7 +7,6 @@ public class Car {
     private String carClass, marka;
     private Driver driver;
     private Engine engine;
-    private SportCar speed;
 
     public Car(String marka, String carClass, Driver driver, Engine engine) {
         this.marka = marka;
@@ -16,20 +15,20 @@ public class Car {
         this.engine = engine;
     }
 
-    private void start() {
-        System.out.println("Едет прямо");
+    public void start() {
+        System.out.println("Едет прямо. ");
     }
 
-    private void stop() {
-        System.out.println("Остановился");
+    public void stop() {
+        System.out.println("Остановился. ");
     }
 
-    private void turnLeft() {
-        System.out.println("Повернул налево");
+    public void turnLeft() {
+        System.out.println("Поверачивает налево. ");
     }
 
-    private void turnRight() {
-        System.out.println("Повернул направо");
+    public void turnRight() {
+        System.out.println("Поворачивает направо. ");
     }
 
 
@@ -44,20 +43,26 @@ public class Car {
         Driver driver = new Driver("Олег Алексеевич; ", 21, 3);
         Driver driver1 = new Driver("Michael Shumaher ", 43, 15);
         Driver driver2 = new Driver("Mike Huston ", 32, 7);
+
         Engine engine = new Engine(234, " Mercedes; ");
         Engine engine1 = new Engine(345, " BMW ");
         Engine engine2 = new Engine(990, " CAT ");
+
         Car myCar = new Car(" Mercedes S class; ", " Luxury Car; ", driver, engine);
+        SportCar maxSpeedCar = new SportCar(333.3, "Formula-1, ", "Faster car, ", driver1, engine1);
+        Lorry monsterTruck = new Lorry(500, "CAT", "The biggest truck", driver2, engine2);
+
         myCar.printInfo();
         myCar.start();
-        myCar.stop();
-        myCar.turnLeft();
+        System.out.println("После чего ");
         myCar.turnRight();
         System.out.println(" ");
-        SportCar maxSpeedCar = new SportCar(333.3, "Formula-1, ", "Faster car, ", driver1, engine1);
+
         maxSpeedCar.printInfo();
+        maxSpeedCar.stop();
         System.out.println(" ");
-        Lorry monsterTruck = new Lorry(500, "CAT", "The biggest truck", driver2, engine2);
+
         monsterTruck.printInfo();
+        monsterTruck.turnLeft();
     }
 }

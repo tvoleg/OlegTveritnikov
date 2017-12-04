@@ -1,9 +1,9 @@
 package com.lesson1.lesson9.libraryCheck;
 
-public class BookList {
+public class Book {
     private String bookTitle;
 
-    public BookList (String bookTitle){
+    public Book(String bookTitle) {
         this.bookTitle = bookTitle;
     }
 
@@ -20,7 +20,7 @@ public class BookList {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        BookList bookList = (BookList) o;
+        Book bookList = (Book) o;
 
         return bookTitle != null ? bookTitle.equals(bookList.bookTitle) : bookList.bookTitle == null;
     }
@@ -32,7 +32,7 @@ public class BookList {
 
     @Override
     public String toString() {
-        return "BookList: " +
+        return "Book: " +
                 "bookTitle='" + bookTitle;
     }
 }

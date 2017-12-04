@@ -5,9 +5,9 @@ public class Book implements Printable {
         System.out.println("typing book");
     }
 
-    public static void printBook(Printable[] mag) {
+    public static void printBook(Printable[] book) {
         System.out.println("printBook");
-        for (Printable p : mag) {
+        for (Printable p : book) {
             if (p instanceof Book) {
                 System.out.println(p);
             }

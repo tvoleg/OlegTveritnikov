@@ -12,7 +12,10 @@ public class Driver extends DriverPerson {
     public int getExperience() {
         return experience;
     }
-    public void setExperience(int experience){this.experience = experience;}
+
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
 
     public static void main(String[] args) {
     }

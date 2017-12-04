@@ -3,7 +3,7 @@ package com.lesson1.lesson9.libraryCheck;
 import java.util.Arrays;
 
 public class LibraryCheckBook {
-    private BookList[] books;
+    private Book[] books;
     private LibraryUsers[] users;
 
     public LibraryCheckBook() {
@@ -13,11 +13,11 @@ public class LibraryCheckBook {
         this.users = users;
     }
 
-    public BookList[] getBooks() {
+    public Book[] getBooks() {
         return books;
     }
 
-    public void setBooks(BookList[] books) {
+    public void setBooks(Book[] books) {
         this.books = books;
     }
 
@@ -29,25 +29,25 @@ public class LibraryCheckBook {
         this.users = users;
     }
 
-    public void takebook(int countBooks) {
-        books = new BookList[countBooks];
+    public void takeBook(int countBooks) {
+        books = new Book[countBooks];
     }
 
-    public void takebook(String... bookTitles) {
-        books = new BookList[bookTitles.length];
+    public void takeBook(String... bookTitles) {
+        books = new Book[bookTitles.length];
         for (int i = 0; i < bookTitles.length; i++) {
-            books[i] = new BookList(bookTitles[i]);
+            books[i] = new Book(bookTitles[i]);
         }
     }
 
-    public BookList[] returnBook(int countBooks) {
-        return new BookList[]{new BookList("Harry Potter"), new BookList("451 fahrenheit")};
+    public Book[] returnBook(int countBooks) {
+        return new Book[]{new Book("Harry Potter"), new Book("451 fahrenheit")};
     }
 
-    public BookList[] returnBook(String... bookTitles) {
-        BookList[] books = new BookList[bookTitles.length];
+    public Book[] returnBook(String... bookTitles) {
+        Book[] books = new Book[bookTitles.length];
         for (int i = 0; i < bookTitles.length; i++) {
-            books[i] = new BookList(bookTitles[i]);
+            books[i] = new Book(bookTitles[i]);
         }
         return books;
     }
@@ -93,15 +93,16 @@ public class LibraryCheckBook {
     }
 
     public static void main(String[] args) {
-        LibraryUsers user [] = new LibraryUsers[]{
-                new LibraryUsers("Alex", "Psychology","14.02.1996",
-                        "+380987654321", "A142B3\n" ),
-                new LibraryUsers("Mike", "History","15.01.1990",
-                        "+3809876542434", "A142B3\n" ),
-                new LibraryUsers("Kate", "Astronaut","01.10.1988",
-                        "+38098763441", "A142B3\n" )};
+        LibraryUsers user[] = new LibraryUsers[]{
+                new LibraryUsers("Alex", "Psychology", "14.02.1996",
+                        "+380987654321", "A142B3\n"),
+                new LibraryUsers("Mike", "History", "15.01.1990",
+                        "+3809876542434", "A142B3\n"),
+                new LibraryUsers("Kate", "Astronaut", "01.10.1988",
+                        "+38098763441", "A142B3\n")};
         LibraryCheckBook libraryCheckBook = new LibraryCheckBook();
         libraryCheckBook.setUsers(user);
         libraryCheckBook.printUsersInfo();
+        libraryCheckBook.takeBook();
     }
 }

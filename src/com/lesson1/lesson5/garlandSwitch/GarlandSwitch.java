@@ -50,7 +50,7 @@ public class GarlandSwitch {
             } else {
                 switch (a) {
                     case 1:
-                        System.out.println("Выбран режим бегущей строки: ");
+                        System.out.println("Байтовое представление гирлянды: ");
                         printState(garland);
                         break;
                     case 2:

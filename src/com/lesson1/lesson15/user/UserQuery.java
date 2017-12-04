@@ -1,55 +1,22 @@
 package com.lesson1.lesson15.user;
 
 public class UserQuery {
-    private String login;
-    private int password;
+    private static String login = "Name";
+    private static int password = 343;
 
-    public String getLogin() {
+    public static String getLogin() {
         return login;
     }
 
-    public int getPassword() {
+    public static int getPassword() {
         return password;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
 
-    public void setPassword(int password) {
-        this.password = password;
-    }
-
-    /*static class Query1 {
+    static class Query1 {
         public void printToLog() {
-            System.out.println("User: " + getLogin()+ " with password " + getPassword() + " has a request.");
+            System.out.println("User: " + getLogin() + " with password " + getPassword() + " has a request.");
         }
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        UserQuery userQuery = (UserQuery) o;
-
-        if (password != userQuery.password) return false;
-        return login != null ? login.equals(userQuery.login) : userQuery.login == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = login != null ? login.hashCode() : 0;
-        result = 31 * result + password;
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "UserQuery: " +
-                "login: " + login + '\'' +
-                ", password: " + password;
     }
 
     public static void main(String[] args) {
@@ -57,5 +24,10 @@ public class UserQuery {
         q.printToLog();
         Query1 q1 = new Query1();
         q1.printToLog();
-    }*/
+    }
+
+    @Override
+    public String toString() {
+        return "UserQuery{}";
+    }
 }

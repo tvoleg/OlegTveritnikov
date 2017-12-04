@@ -5,7 +5,6 @@ public class Engine {
     private String company;
 
     public Engine(int power, String company) {
-        super();
         this.company = company;
         this.power = power;
     }
