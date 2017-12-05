@@ -104,5 +104,6 @@ public class LibraryCheckBook {
         libraryCheckBook.setUsers(user);
         libraryCheckBook.printUsersInfo();
         libraryCheckBook.takeBook();
+        libraryCheckBook.returnBook();
     }
 }

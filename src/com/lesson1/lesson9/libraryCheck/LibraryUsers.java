@@ -2,7 +2,7 @@ package com.lesson1.lesson9.libraryCheck;
 
 public class LibraryUsers {
     String userName, faculty, birthdayDate, phoneNumber, cardNumber;
-    private BookList book;
+    private Book book;
 
     public LibraryUsers(String userName, String faculty, String birthdayDate, String phoneNumber, String cardNumber) {
         this.userName = userName;
@@ -52,19 +52,19 @@ public class LibraryUsers {
         this.cardNumber = cardNumber;
     }
 
-    public BookList getBook() {
+    public Book getBook() {
         return book;
     }
 
-    public void setBook(BookList book) {
+    public void setBook(Book book) {
         this.book = book;
     }
 
-    public void takeBook(BookList bookOne) {
+    public void takeBook(Book bookOne) {
         book = bookOne;
     }
 
-    public BookList returnBook() {
+    public Book returnBook() {
         return book;
     }
 

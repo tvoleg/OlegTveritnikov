@@ -1,4 +1,4 @@
-package com.lesson1.lesson7;
+package com.lesson1.lesson7.phoneTask;
 
 public class Phone {
     private static int count = 0;

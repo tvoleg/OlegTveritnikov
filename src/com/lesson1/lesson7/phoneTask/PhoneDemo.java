@@ -1,4 +1,6 @@
-package com.lesson1.lesson7;
+package com.lesson1.lesson7.phoneTask;
+
+import com.lesson1.lesson7.phoneTask.Phone;
 
 public class PhoneDemo {
 

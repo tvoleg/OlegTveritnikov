@@ -8,9 +8,6 @@ public class HeavyBox2 implements Comparable<HeavyBox2> {
     private int height;
     private int depth;
 
-    private HeavyBox2() {
-    }
-
     private HeavyBox2(int weight, int height, int depth) {
         this.weight = weight;
         this.height = height;
@@ -42,7 +39,7 @@ public class HeavyBox2 implements Comparable<HeavyBox2> {
             return this.weight - heavyBox2Weight;
         } else {
             int heavyBox2Height = heavyBox2.getHeight();
-            return this.height;
+            return this.height - heavyBox2Height;
         }
     }
 
