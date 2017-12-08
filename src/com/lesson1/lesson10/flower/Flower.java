@@ -22,7 +22,7 @@ abstract public class Flower {
         for (Flower f : bouquet) {
            sum = f.costFlower() + sum;
         }
-      return 0;
+      return sum;
     }
 
     @Override
@@ -79,9 +79,7 @@ abstract public class Flower {
         System.out.println("Price of the third bouquet = " + sumSoldBouquets(bouquet3));
 
         int price = sumSoldBouquets(bouquet1) + sumSoldBouquets(bouquet2) + sumSoldBouquets(bouquet3);
-
         System.out.println("Number of sold flowers = " + (bouquet1.length + bouquet2.length + bouquet3.length) +
                 "\nPrice for 3 bouquets =" + price);
-
     }
 }
