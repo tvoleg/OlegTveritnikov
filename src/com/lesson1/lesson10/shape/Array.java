@@ -1,4 +1,4 @@
-package com.lesson1.lesson10;
+package com.lesson1.lesson10.shape;
 
 public class Array {
     public static void main(String[] args) {

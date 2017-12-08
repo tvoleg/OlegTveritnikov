@@ -3,10 +3,16 @@ package com.lesson1.lesson10.flower;
 abstract public class Flower {
     private String manufacturerCountry;
     private int shelfLife;
+    private static int count;
+
+    public static int getCount() {
+        return count;
+    }
 
     public Flower(String manufacturerCountry, int shelfLife) {
         this.manufacturerCountry = manufacturerCountry;
         this.shelfLife = shelfLife;
+        count++;
     }
 
     abstract public int costFlower();
@@ -74,7 +80,7 @@ abstract public class Flower {
 
         int price = sumSoldBouquets(bouquet1) + sumSoldBouquets(bouquet2) + sumSoldBouquets(bouquet3);
 
-        System.out.println("Number of flowers sold = " + (bouquet1.length + bouquet2.length + bouquet3.length) +
+        System.out.println("Number of sold flowers = " + (bouquet1.length + bouquet2.length + bouquet3.length) +
                 "\nPrice for 3 bouquets =" + price);
 
     }

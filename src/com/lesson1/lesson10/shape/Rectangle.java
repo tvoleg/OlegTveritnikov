@@ -1,4 +1,4 @@
-package com.lesson1.lesson10;
+package com.lesson1.lesson10.shape;
 
 public class Rectangle extends Shape {
     private int x1, y1;
