@@ -1,5 +1,6 @@
 package com.lesson1.lesson10.animal;
 
+
 abstract public class Animal {
     private String food, location;
 
@@ -24,11 +25,37 @@ abstract public class Animal {
         this.location = location;
     }
 
-    abstract public String makeNoise ();
-    abstract public String eat ();
+    abstract public void makeNoise();
 
-    public static void sleep(){
+    abstract public void eat();
+
+    public static void sleep() {
         System.out.println("Sleeping...");
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Animal animal = (Animal) o;
+
+        if (food != null ? !food.equals(animal.food) : animal.food != null) return false;
+        return location != null ? location.equals(animal.location) : animal.location == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = food != null ? food.hashCode() : 0;
+        result = 31 * result + (location != null ? location.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "food='" + food + '\'' +
+                ", location='" + location + '\'' +
+                '}';
+    }
 }

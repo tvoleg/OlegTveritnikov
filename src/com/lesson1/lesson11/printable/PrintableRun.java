@@ -1,4 +1,4 @@
-package com.lesson1.lesson11;
+package com.lesson1.lesson11.printable;
 
 public class PrintableRun {
     public static void main(String[] args) {
