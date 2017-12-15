@@ -1,7 +1,7 @@
 package com.lesson1.lesson10.animal;
 
 public class Vet {
-    static void treatAnimal(Animal animal) {
+    private static void treatAnimal(Animal animal) {
         System.out.println("Location: " + animal.getLocation() + "\nFood: " + animal.getFood());
     }
 

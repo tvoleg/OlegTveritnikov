@@ -12,6 +12,6 @@ public class Apricot extends Fruit {
 
     @Override
     public String toString() {
-        return "Apricot{} " + super.toString();
+        return "Apricot = " + super.toString();
     }
 }
