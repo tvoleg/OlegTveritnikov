@@ -26,5 +26,4 @@ public class Matrix {
         System.out.println(Arrays.deepToString(this.array));
     }
 
-
 }
