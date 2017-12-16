@@ -29,7 +29,7 @@ abstract public class Animal {
 
     abstract public void eat();
 
-    public static void sleep() {
+    public void sleep() {
         System.out.println("Sleeping...");
     }
 

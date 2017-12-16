@@ -2,14 +2,14 @@ package com.lesson1.lesson9.circle;
 
 public class CircleDemo {
     private double radius;
-    static final double PI = 3.14;
+    private static final double PI = 3.14;
 
-    CircleDemo(double radius) {
+    public CircleDemo(double radius) {
         this.radius = radius;
     }
 
     public double areaCircle() {
-        return (radius * radius) * PI;
+        return radius * radius * PI;
     }
 
     public double longCircle() {
