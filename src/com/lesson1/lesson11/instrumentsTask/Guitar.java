@@ -1,4 +1,4 @@
-package com.lesson1.lesson11.instruments;
+package com.lesson1.lesson11.instrumentsTask;
 
 public class Guitar implements Instrument {
     private int numberOfStrings;

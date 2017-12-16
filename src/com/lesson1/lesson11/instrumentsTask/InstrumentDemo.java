@@ -1,4 +1,4 @@
-package com.lesson1.lesson11.instruments;
+package com.lesson1.lesson11.instrumentsTask;
 
 public class InstrumentDemo {
     public static void main(String[] args) {

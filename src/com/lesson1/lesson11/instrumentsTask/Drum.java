@@ -1,4 +1,4 @@
-package com.lesson1.lesson11.instruments;
+package com.lesson1.lesson11.instrumentsTask;
 
 public class Drum implements Instrument {
     private int size;
@@ -38,7 +38,6 @@ public class Drum implements Instrument {
     @Override
     public String toString() {
         return "Drum{" +
-                "size=" + size +
-                '}';
+                "size=" + size;
     }
 }
