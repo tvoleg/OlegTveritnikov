@@ -47,7 +47,7 @@ abstract public class Fruit {
 
     @Override
     public String toString() {
-        return "Fruit weight = " + weight+ ";";
+        return "Fruit weight = " + weight + ";";
     }
 
     public static void main(String[] args) {
@@ -58,10 +58,12 @@ abstract public class Fruit {
         fruit[3] = new Pear(0.4);
         fruit[4] = new Apricot(3.3);
         for (Fruit f : fruit) {
-            System.out.println("Sum of sold fruit's =" + f.getCost() + "\n");
+            System.out.println("\nSum of sold fruit's = " + f.getCost());
             f.printManufacturerInfo();
         }
         Fruit.sumFruits(fruit);
     }
-
 }
+
+
+

@@ -46,7 +46,12 @@ public class DoubleValueOfCheck {
         Double object = Double.valueOf(11.11);
         Double object1 = Double.valueOf(33.33);
 
-        System.out.println("Присвоение Double при помощи valueOf() = " + object + " and " + object1);
+        System.out.println("Приведение Double при помощи valueOf() = " + object + " and " + object1);
+
+        double d1 = Double.parseDouble("24.5");
+        System.out.println(
+                "Приведение String к double при помощи parseDouble() = " + d1);
+
 
     }
 
