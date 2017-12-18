@@ -1,6 +1,8 @@
 package com.lesson1.lesson19.animalSerializable;
 
-public class Horse extends Animal {
+import java.io.Serializable;
+
+public class Horse implements Serializable {
     private Halter halter;
     private String name;
 

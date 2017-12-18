@@ -11,10 +11,10 @@ public class HBIterator {
         smallBox.add(new HeavyBox(100, 301, 29));
         smallBox.add(new HeavyBox(300, 500, 99));
         smallBox.add(new HeavyBox(999, 111, 999));
-        IterateBox(smallBox);
+        iterateBox(smallBox);
     }
 
-    private static void IterateBox(List<HeavyBox> smallBox) {
+    private static void iterateBox(List<HeavyBox> smallBox) {
         Iterator<HeavyBox> iterator = smallBox.iterator();
         List<HeavyBox> bigBox = new ArrayList<>();
         while (iterator.hasNext()) {
@@ -24,6 +24,7 @@ public class HBIterator {
                 iterator.remove();
                 bigBox.add(hb);
             }
+            System.out.println(bigBox);
         }
     }
 }

@@ -1,10 +1,10 @@
 package com.lesson1.lesson20.myQueue;
 
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class MyQueue {
-    private Queue<Integer> queue;
-
+    private Queue<Integer> queue = new ArrayDeque<>();
 
     public synchronized int get() {
         while (queue.isEmpty()) {

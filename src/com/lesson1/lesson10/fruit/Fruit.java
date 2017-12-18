@@ -15,16 +15,8 @@ abstract public class Fruit {
         this.weight = weight;
     }
 
-    public final void printManufacturerInfo() {
+    static final void printManufacturerInfo() {
         System.out.print("Made in Ukraine");
-    }
-
-    public static double sumFruits(Fruit[] fruits) {
-        double sum = 0;
-        for (Fruit f : fruits) {
-            sum = f.getCost() + sum;
-        }
-        return sum;
     }
 
     abstract public double getCost();
@@ -51,6 +43,7 @@ abstract public class Fruit {
     }
 
     public static void main(String[] args) {
+        double sum = 0;
         Fruit[] fruit = new Fruit[6];
         fruit[0] = new Apple(0.8);
         fruit[1] = new Apple(1.45);
@@ -61,7 +54,6 @@ abstract public class Fruit {
             System.out.println("\nSum of sold fruit's = " + f.getCost());
             f.printManufacturerInfo();
         }
-        Fruit.sumFruits(fruit);
     }
 }
 

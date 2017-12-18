@@ -11,8 +11,8 @@ public class BufferReader {
             String a;
             while ((a = bufferedReader.readLine()) != null) {
                 out.write(a);
-                out.flush();
             }
+            out.flush();
             System.out.println("Запись в файл произведена");
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
