@@ -1,5 +1,8 @@
 package com.lesson1.lesson10.fruit;
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 abstract public class Fruit {
     private double weight;
 
@@ -20,6 +23,13 @@ abstract public class Fruit {
     }
 
     abstract public double getCost();
+
+    private static void sumFruit(double sum, Fruit[] fruit) {
+        for (Fruit f : fruit) {
+            sum = sum + f.getCost();
+        }
+        System.out.println(sum);
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -54,6 +64,7 @@ abstract public class Fruit {
             System.out.println("\nSum of sold fruit's = " + f.getCost());
             f.printManufacturerInfo();
         }
+        sumFruit(sum, fruit);
     }
 }
 

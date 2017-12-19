@@ -19,8 +19,8 @@ public class CatalogDAO extends AbstractDAO<Integer, Catalog> {
             ResultSet rs = statement.executeQuery(SQL_SELECT_ALL_USERS);
             while (rs.next()) {
                 int id = rs.getInt(1);
-                String name = rs.getString(2);
-                catalog.add(new Catalog(id, name));
+                String prod_name = rs.getString(2);
+                catalog.add(new Catalog(id, prod_name));
             }
         } catch (SQLException e) {
             System.err.println("SQL Exception (request or table failed):" + e);
@@ -37,8 +37,8 @@ public class CatalogDAO extends AbstractDAO<Integer, Catalog> {
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
                 id = rs.getInt(1);
-                String name = rs.getString(2);
-                catalog = new Catalog(id, name);
+                String prod_name = rs.getString(2);
+                catalog = new Catalog(id, prod_name);
             }
         } catch (SQLException e) {
             System.err.println("SQL Exception (request or table failed):" + e);
