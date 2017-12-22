@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CatalogDAO extends AbstractDAO<Integer, Catalog> {
     public static final String SQL_SELECT_ALL_USERS = "SELECT * FROM catalog";
-    public static final String SQL_SELECT_USER_ID = "SELECT * FROM catalog WHERE id=?, prod_name=?";
+    public static final String SQL_SELECT_USER_ID = "SELECT * FROM catalog WHERE id=?, name=?";
 
     @Override
     public List<Catalog> findAll() {
@@ -19,8 +19,8 @@ public class CatalogDAO extends AbstractDAO<Integer, Catalog> {
             ResultSet rs = statement.executeQuery(SQL_SELECT_ALL_USERS);
             while (rs.next()) {
                 int id = rs.getInt(1);
-                String prod_name = rs.getString(2);
-                catalog.add(new Catalog(id, prod_name));
+                String name = rs.getString(2);
+                catalog.add(new Catalog(id, name));
             }
         } catch (SQLException e) {
             System.err.println("SQL Exception (request or table failed):" + e);
@@ -37,8 +37,8 @@ public class CatalogDAO extends AbstractDAO<Integer, Catalog> {
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
                 id = rs.getInt(1);
-                String prod_name = rs.getString(2);
-                catalog = new Catalog(id, prod_name);
+                String name = rs.getString(2);
+                catalog = new Catalog(id, name);
             }
         } catch (SQLException e) {
             System.err.println("SQL Exception (request or table failed):" + e);
