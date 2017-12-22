@@ -12,7 +12,7 @@ import java.util.List;
 
 public class UsersDAO extends AbstractDAO<Integer, User> {
     public static final String SQL_SELECT_ALL_USERS = "SELECT * FROM users";
-    public static final String SQL_SELECT_USER_ID = "SELECT * FROM users WHERE id=?, login=?, user_password=?";
+    public static final String SQL_SELECT_USER_ID = "SELECT * FROM users WHERE id=?";
 
     @Override
     public List<User> findAll() {

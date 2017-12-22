@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ProductDAO extends AbstractDAO<Integer, Product> {
     public static final String SQL_SELECT_ALL_PRODUCT = "SELECT * FROM product";
-    public static final String SQL_SELECT_PRODUCT_ID = "SELECT * FROM product WHERE id=?, name=?, price=?, rate=?";
+    public static final String SQL_SELECT_PRODUCT_ID = "SELECT * FROM product WHERE id=?";
 
     @Override
     public List<Product> findAll() {

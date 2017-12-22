@@ -8,8 +8,7 @@ import java.util.List;
 
 public class BasketDAO extends AbstractDAO<Integer, Basket> {
     public static final String SQL_SELECT_ALL_BASKET_PRODUCT = "SELECT * FROM basket";
-    public static final String SQL_SELECT_BASKET_PRODUCT_ID = "SELECT * FROM basket WHERE id=?, user_id=?," +
-            "cat_prod_id=?,prod_count=?,date_of_buy=?";
+    public static final String SQL_SELECT_BASKET_PRODUCT_ID = "SELECT * FROM basket WHERE id=?";
 
     @Override
     public List<Basket> findAll() {

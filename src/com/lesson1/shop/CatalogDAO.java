@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CatalogDAO extends AbstractDAO<Integer, Catalog> {
     public static final String SQL_SELECT_ALL_CATALOG_USERS = "SELECT * FROM catalog";
-    public static final String SQL_SELECT_CATALOG_USER_ID = "SELECT * FROM catalog WHERE id=?, name=?";
+    public static final String SQL_SELECT_CATALOG_ID = "SELECT * FROM catalog WHERE id=?";
 
     @Override
     public List<Catalog> findAll() {
@@ -31,7 +31,7 @@ public class CatalogDAO extends AbstractDAO<Integer, Catalog> {
     public Catalog findEntityById(Integer id) {
         Catalog catalog = null;
         try (Connection connection = ConnectorDB.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_SELECT_CATALOG_USER_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SQL_SELECT_CATALOG_ID)) {
             statement.setInt(1, id);
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
