@@ -1,4 +1,6 @@
-package com.lesson1.lesson21;
+package com.lesson1.shop;
+
+import com.lesson1.lesson21.ConnectorDB;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +12,7 @@ import java.util.List;
 
 public class UsersDAO extends AbstractDAO<Integer, User> {
     public static final String SQL_SELECT_ALL_USERS = "SELECT * FROM users";
-    public static final String SQL_SELECT_USER_ID = "SELECT * FROM users WHERE id=?";
+    public static final String SQL_SELECT_USER_ID = "SELECT * FROM users WHERE id=?, login=?, user_password=?";
 
     @Override
     public List<User> findAll() {
@@ -20,8 +22,9 @@ public class UsersDAO extends AbstractDAO<Integer, User> {
             ResultSet rs = statement.executeQuery(SQL_SELECT_ALL_USERS);
             while (rs.next()) {
                 int id = rs.getInt(1);
-                String name = rs.getString(2);
-                users.add(new User(id, name));
+                String login = rs.getString(2);
+                String user_password = rs.getString(3);
+                users.add(new User(id, login, user_password));
             }
         } catch (SQLException e) {
             System.err.println("SQL Exception (request or table failed):" + e);
@@ -38,8 +41,9 @@ public class UsersDAO extends AbstractDAO<Integer, User> {
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
                 id = rs.getInt(1);
-                String name = rs.getString(2);
-                user = new User(id, name);
+                String login = rs.getString(2);
+                String user_password = rs.getString(3);
+                user = new User(id, login, user_password);
             }
         } catch (SQLException e) {
             System.err.println("SQL Exception (request or table failed):" + e);

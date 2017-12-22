@@ -1,8 +1,7 @@
 package com.lesson1.lesson7.garlandArray;
 
-import java.util.Scanner;
-
 public class GarlandArray {
+
     public static void blinkLamps(int count, int a) {
         int b = a;
         for (int i = 0; i < count; i++) {
@@ -33,7 +32,7 @@ public class GarlandArray {
     }
 
   /*  public static void main(String[] args) {
-        int [] garland = new int [] {1,2,3,5,67,123,5,2,54,228,5,67,54,3,2,2,1};
+        int [] garland = new int [] {1,0,1,1,1,1,1,0,1,0,0,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,0,1};
         Scanner scn = new Scanner(System.in);
         int a;
         System.out.println("Используемая гирлянда: " + garland);

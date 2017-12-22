@@ -1,5 +1,8 @@
 package com.lesson1.lesson21;
 
+import com.lesson1.shop.AbstractDAO;
+import com.lesson1.shop.User;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PhonesDAO extends AbstractDAO<Integer,User >{
+public class PhonesDAO extends AbstractDAO<Integer,User> {
     public static final String SQL_SELECT_ALL_USERS = "SELECT * FROM phones";
     public static final String SQL_SELECT_USER_ID = "SELECT * FROM phones WHERE user_id=?";
 

@@ -2,11 +2,11 @@ package com.lesson1.shop;
 
 public class Catalog {
     private int id;
-    private String prod_name;
+    private String name;
 
-    public Catalog(int id, String username) {
+    public Catalog(int id, String name) {
         this.id = id;
-        this.prod_name = prod_name;
+        this.name = name;
     }
 
     public Catalog() {
@@ -20,11 +20,19 @@ public class Catalog {
         this.id = id;
     }
 
-    public String getProd_name() {
-        return prod_name;
+    public String getName() {
+        return name;
     }
 
-    public void setProd_name(String prod_name) {
-        this.prod_name = prod_name;
+    public void setName(String prod_name) {
+        this.name = prod_name;
+    }
+
+    @Override
+    public String toString() {
+        return "Catalog{" +
+                "id=" + id +
+                ", prod_name='" + name + '\'' +
+                '}';
     }
 }

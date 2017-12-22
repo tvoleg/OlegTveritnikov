@@ -24,7 +24,8 @@ abstract public class Fruit {
 
     abstract public double getCost();
 
-    private static void sumFruit(double sum, Fruit[] fruit) {
+    private static void sumFruit(Fruit[] fruit) {
+        double sum = 0;
         for (Fruit f : fruit) {
             sum = sum + f.getCost();
         }
@@ -53,18 +54,19 @@ abstract public class Fruit {
     }
 
     public static void main(String[] args) {
-        double sum = 0;
         Fruit[] fruit = new Fruit[6];
         fruit[0] = new Apple(0.8);
         fruit[1] = new Apple(1.45);
         fruit[2] = new Pear(10.2);
         fruit[3] = new Pear(0.4);
         fruit[4] = new Apricot(3.3);
+        fruit[5] = new Apricot(3.3);
         for (Fruit f : fruit) {
             System.out.println("\nSum of sold fruit's = " + f.getCost());
             f.printManufacturerInfo();
+            System.out.println(" ");
         }
-        sumFruit(sum, fruit);
+        sumFruit(fruit);
     }
 }
 

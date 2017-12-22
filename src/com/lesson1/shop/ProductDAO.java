@@ -6,62 +6,66 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CatalogDAO extends AbstractDAO<Integer, Catalog> {
-    public static final String SQL_SELECT_ALL_CATALOG_USERS = "SELECT * FROM catalog";
-    public static final String SQL_SELECT_CATALOG_USER_ID = "SELECT * FROM catalog WHERE id=?, name=?";
+public class ProductDAO extends AbstractDAO<Integer, Product> {
+    public static final String SQL_SELECT_ALL_PRODUCT = "SELECT * FROM product";
+    public static final String SQL_SELECT_PRODUCT_ID = "SELECT * FROM product WHERE id=?, name=?, price=?, rate=?";
 
     @Override
-    public List<Catalog> findAll() {
-        List<Catalog> catalog = new ArrayList<>();
+    public List<Product> findAll() {
+        List<Product> product = new ArrayList<>();
         try (Connection connection = ConnectorDB.getConnection();
              Statement statement = connection.createStatement()) {
-            ResultSet rs = statement.executeQuery(SQL_SELECT_ALL_CATALOG_USERS);
+            ResultSet rs = statement.executeQuery(SQL_SELECT_ALL_PRODUCT);
             while (rs.next()) {
                 int id = rs.getInt(1);
                 String name = rs.getString(2);
-                catalog.add(new Catalog(id, name));
+                String price = rs.getString(3);
+                int rate = rs.getInt(4);
+                product.add(new Product(id, name, price, rate));
             }
         } catch (SQLException e) {
             System.err.println("SQL Exception (request or table failed):" + e);
         }
-        return catalog;
+        return product;
     }
 
     @Override
-    public Catalog findEntityById(Integer id) {
-        Catalog catalog = null;
+    public Product findEntityById(Integer id) {
+        Product product = null;
         try (Connection connection = ConnectorDB.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_SELECT_CATALOG_USER_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SQL_SELECT_PRODUCT_ID)) {
             statement.setInt(1, id);
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
                 id = rs.getInt(1);
                 String name = rs.getString(2);
-                catalog = new Catalog(id, name);
+                String price = rs.getString(3);
+                int rate = rs.getInt(4);
+                product = new Product(id, name, price, rate);
             }
         } catch (SQLException e) {
             System.err.println("SQL Exception (request or table failed):" + e);
         }
-        return catalog;
+        return product;
     }
 
     @Override
     public boolean delete(Integer id) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
-    public boolean delete(Catalog entity) {
         return false;
     }
 
     @Override
-    public boolean create(Catalog entity) {
+    public boolean delete(Product entity) {
         return false;
     }
 
     @Override
-    public Catalog update(Catalog entity) {
+    public boolean create(Product entity) {
+        return false;
+    }
+
+    @Override
+    public Product update(Product entity) {
         return null;
     }
 }

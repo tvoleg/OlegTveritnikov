@@ -1,4 +1,4 @@
-package com.lesson1.lesson21;
+package com.lesson1.shop;
 
 import java.util.List;
 
