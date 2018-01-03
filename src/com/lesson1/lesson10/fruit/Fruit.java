@@ -1,8 +1,5 @@
 package com.lesson1.lesson10.fruit;
 
-import java.util.Arrays;
-import java.util.stream.IntStream;
-
 abstract public class Fruit {
     private double weight;
 
@@ -66,6 +63,7 @@ abstract public class Fruit {
             f.printManufacturerInfo();
             System.out.println(" ");
         }
+        System.out.print("Сумма всех фруктов = ");
         sumFruit(fruit);
     }
 }
